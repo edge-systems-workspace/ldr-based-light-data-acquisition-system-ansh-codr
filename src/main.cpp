@@ -2,7 +2,7 @@
 
 /**
  * @file main.cpp
- * @brief LDR Light Intensity Monitor
+ * @brief LDR-based Light Intensity Monitoring
  * @author ansh-codr
  * @date 2026-02-21
  */
@@ -26,4 +26,18 @@ void loop() {
 
     Serial.print("Raw ADC Value: ");
     Serial.println(ldrValue);
+
+    String brightnessStatus;
+
+    if (ldrValue < 500) {
+        brightnessStatus = "Bright Environment";
+    } else {
+        brightnessStatus = "Dark Environment";
+    }
+
+    Serial.print("Status: ");
+    Serial.println(brightnessStatus);
+    Serial.println("---------------------------------");
+
+    delay(1000);
 }
