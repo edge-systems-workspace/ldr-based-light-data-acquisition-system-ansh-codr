@@ -7,6 +7,9 @@
  * @date 2026-02-21
  */
 
+int LDR_PIN = A0;
+int ldrValue = 0;
+
 void setup() {
 }
 
