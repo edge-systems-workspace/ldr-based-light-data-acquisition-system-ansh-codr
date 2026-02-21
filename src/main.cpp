@@ -11,6 +11,13 @@ int LDR_PIN = A0;
 int ldrValue = 0;
 
 void setup() {
+
+    Serial.begin(9600);
+
+    Serial.println("=================================");
+    Serial.println("  LDR Light Intensity Monitor");
+    Serial.println("  System Initializing...");
+    Serial.println("=================================");
 }
 
 void loop() {
